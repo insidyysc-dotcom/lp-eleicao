@@ -259,6 +259,25 @@
   filter: blur(2px);
 }
 
+.hero__photo-baseline {
+  position: absolute;
+  z-index: 2;
+  bottom: 9%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(58%, 250px);
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, var(--pink-bright) 18%, var(--pink) 50%, var(--pink-bright) 82%, transparent);
+  box-shadow: 0 0 22px 3px rgba(252, 45, 136, 0.65);
+  animation: baseline-glow 4s ease-in-out infinite;
+}
+
+@keyframes baseline-glow {
+  0%, 100% { opacity: 0.85; box-shadow: 0 0 18px 2px rgba(252, 45, 136, 0.55); }
+  50% { opacity: 1; box-shadow: 0 0 28px 5px rgba(252, 45, 136, 0.8); }
+}
+
 .hero__photo-img {
   position: relative;
   z-index: 1;

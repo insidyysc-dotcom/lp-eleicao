@@ -68,6 +68,7 @@ export function Hero() {
               fetchPriority="high"
             />
           </picture>
+          <span className="hero__photo-baseline" aria-hidden="true" />
         </div>
       </div>
 
