@@ -196,6 +196,19 @@
   min-height: 420px;
 }
 
+/* A moldura tem exatamente o tamanho da foto renderizada, então tudo
+   posicionado dentro dela (disco, anel, sombra, linha) fica relativo
+   à própria imagem — não ao container largo do grid. */
+.hero__photo-frame {
+  position: relative;
+  width: min(100%, 420px);
+  /* A pessoa não está perfeitamente centralizada no PNG (sobra mais
+     espaço transparente à esquerda do que à direita): ~2.9% do
+     recorte real. Corrige o centro de referência dos elementos
+     decorativos para acompanhar o corpo dela, não a tela do arquivo. */
+  --subject-shift: 2.9%;
+}
+
 .hero__photo-stage {
   position: absolute;
   inset: 0;
@@ -204,6 +217,10 @@
   justify-content: center;
   z-index: 0;
   pointer-events: none;
+  /* translateX resolve em % da largura do próprio elemento (que aqui
+     ocupa o frame inteiro), então isso desloca disco + anel juntos
+     sem interferir nas animações de scale/rotate deles. */
+  transform: translateX(var(--subject-shift));
 }
 
 .hero__photo-disc {
@@ -250,7 +267,10 @@
 
 .hero__photo-shadow {
   position: absolute;
+  z-index: 2;
   bottom: 4%;
+  left: calc(50% + var(--subject-shift));
+  transform: translateX(-50%);
   width: 46%;
   max-width: 260px;
   height: 34px;
@@ -263,7 +283,7 @@
   position: absolute;
   z-index: 2;
   bottom: 9%;
-  left: 50%;
+  left: calc(50% + var(--subject-shift));
   transform: translateX(-50%);
   width: min(58%, 250px);
   height: 7px;

@@ -52,23 +52,25 @@ export function Hero() {
         </div>
 
         <div className="hero__photo">
-          <div className="hero__photo-stage" aria-hidden="true">
-            <span className="hero__photo-ring" />
-            <span className="hero__photo-disc" />
-            <span className="hero__photo-shadow" />
+          <div className="hero__photo-frame">
+            <div className="hero__photo-stage" aria-hidden="true">
+              <span className="hero__photo-ring" />
+              <span className="hero__photo-disc" />
+            </div>
+            <picture>
+              <source srcSet="/images/foto-juliane.webp" type="image/webp" />
+              <img
+                src="/images/foto-juliane.png"
+                alt="Juliane Vieira, candidata a Deputada Estadual, sorrindo"
+                className="hero__photo-img"
+                width={1100}
+                height={1555}
+                fetchPriority="high"
+              />
+            </picture>
+            <span className="hero__photo-shadow" aria-hidden="true" />
+            <span className="hero__photo-baseline" aria-hidden="true" />
           </div>
-          <picture>
-            <source srcSet="/images/foto-juliane.webp" type="image/webp" />
-            <img
-              src="/images/foto-juliane.png"
-              alt="Juliane Vieira, candidata a Deputada Estadual, sorrindo"
-              className="hero__photo-img"
-              width={1100}
-              height={1555}
-              fetchPriority="high"
-            />
-          </picture>
-          <span className="hero__photo-baseline" aria-hidden="true" />
         </div>
       </div>
 
