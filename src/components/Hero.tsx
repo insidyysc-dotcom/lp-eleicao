@@ -68,8 +68,9 @@ export function Hero() {
                 fetchPriority="high"
               />
             </picture>
-            <span className="hero__photo-shadow" aria-hidden="true" />
-            <span className="hero__photo-baseline" aria-hidden="true" />
+            <svg className="hero__photo-wave" viewBox="0 0 192 47" aria-hidden="true">
+              <path d="M0,15 A16,16 0 0 0 32,15 A16,16 0 0 0 64,15 A16,16 0 0 0 96,15 A16,16 0 0 0 128,15 A16,16 0 0 0 160,15 A16,16 0 0 0 192,15 L192,0 L0,0 Z" />
+            </svg>
           </div>
         </div>
       </div>
