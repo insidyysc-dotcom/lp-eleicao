@@ -9,9 +9,9 @@ export function About() {
         <Reveal className="about__photo" as="div">
           <div className="about__photo-frame">
             <picture>
-              <source srcSet="/images/foto-juliane.webp" type="image/webp" />
+              <source srcSet="/images/foto-juliane.webp?v=2" type="image/webp" />
               <img
-                src="/images/foto-juliane.png"
+                src="/images/foto-juliane.png?v=2"
                 alt="Juliane Vieira, advogada e candidata a Deputada Estadual"
                 loading="lazy"
               />

@@ -58,9 +58,9 @@ export function Hero() {
               <span className="hero__photo-disc" />
             </div>
             <picture>
-              <source srcSet="/images/foto-juliane.webp" type="image/webp" />
+              <source srcSet="/images/foto-juliane.webp?v=2" type="image/webp" />
               <img
-                src="/images/foto-juliane.png"
+                src="/images/foto-juliane.png?v=2"
                 alt="Juliane Vieira, candidata a Deputada Estadual, sorrindo"
                 className="hero__photo-img"
                 width={1100}
