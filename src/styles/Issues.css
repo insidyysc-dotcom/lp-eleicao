@@ -56,34 +56,14 @@
   color: var(--ink-soft);
 }
 
-.issues__grid > :last-child:nth-child(3n + 1) {
-  grid-column: 2;
-}
-
 @media (max-width: 980px) {
   .issues__grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .issues__grid > :last-child:nth-child(3n + 1) {
-    grid-column: auto;
-  }
-
-  .issues__grid > :last-child:nth-child(2n + 1) {
-    grid-column: 1 / -1;
-    max-width: calc(50% - 12px);
-    margin: 0 auto;
   }
 }
 
 @media (max-width: 640px) {
   .issues__grid {
     grid-template-columns: 1fr;
-  }
-
-  .issues__grid > :last-child {
-    grid-column: auto;
-    max-width: none;
-    margin: 0;
   }
 }

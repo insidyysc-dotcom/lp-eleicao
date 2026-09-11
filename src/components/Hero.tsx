@@ -64,7 +64,7 @@ export function Hero() {
                 alt="Juliane Vieira, candidata a Deputada Estadual, sorrindo"
                 className="hero__photo-img"
                 width={1100}
-                height={1375}
+                height={1540}
                 fetchPriority="high"
               />
             </picture>
