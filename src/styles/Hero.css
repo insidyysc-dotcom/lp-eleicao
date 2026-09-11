@@ -193,7 +193,7 @@
   align-items: flex-end;
   justify-content: center;
   height: 100%;
-  min-height: 420px;
+  min-height: min(420px, 44vh);
 }
 
 /* A moldura tem exatamente o tamanho da foto renderizada, então tudo
@@ -201,7 +201,7 @@
    à própria imagem — não ao container largo do grid. */
 .hero__photo-frame {
   position: relative;
-  width: min(100%, 420px);
+  width: min(100%, 420px, 56vh);
   /* A pessoa não está perfeitamente centralizada no PNG (sobra mais
      espaço transparente à esquerda do que à direita): ~3.1% do
      recorte real. Corrige o centro de referência dos elementos
@@ -270,7 +270,7 @@
 .hero__photo-img {
   position: relative;
   z-index: 1;
-  width: min(100%, 420px);
+  width: 100%;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 30px 40px rgba(8, 20, 40, 0.35));
@@ -347,8 +347,8 @@
     border-radius: 0 0 24px 24px;
   }
 
-  .hero__photo-img {
-    width: min(100%, 300px);
+  .hero__photo-frame {
+    width: min(100%, 300px, 56vh);
   }
 
   .hero__number {
@@ -368,5 +368,42 @@
 
   .hero__actions .btn {
     flex: 1;
+  }
+}
+
+/* Notebooks com altura de tela reduzida: encolhe respiros e a foto
+   proporcionalmente à altura disponível, para a imagem inteira
+   (incluindo a base) caber sem precisar rolar a página. */
+@media (max-height: 800px) and (min-width: 981px) {
+  .hero {
+    padding-top: 92px;
+    padding-bottom: 28px;
+  }
+
+  .hero__title {
+    margin-bottom: 14px;
+  }
+
+  .hero__flag {
+    margin-bottom: 12px;
+  }
+
+  .hero__subtitle {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-height: 680px) and (min-width: 981px) {
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 18px;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .hero__scroll {
+    margin-top: 20px;
   }
 }
