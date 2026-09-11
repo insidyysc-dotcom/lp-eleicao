@@ -64,13 +64,10 @@ export function Hero() {
                 alt="Juliane Vieira, candidata a Deputada Estadual, sorrindo"
                 className="hero__photo-img"
                 width={1100}
-                height={1555}
+                height={1375}
                 fetchPriority="high"
               />
             </picture>
-            <svg className="hero__photo-wave" viewBox="0 0 192 47" aria-hidden="true">
-              <path d="M0,15 A16,16 0 0 0 32,15 A16,16 0 0 0 64,15 A16,16 0 0 0 96,15 A16,16 0 0 0 128,15 A16,16 0 0 0 160,15 A16,16 0 0 0 192,15 L192,0 L0,0 Z" />
-            </svg>
           </div>
         </div>
       </div>

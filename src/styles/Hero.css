@@ -203,10 +203,11 @@
   position: relative;
   width: min(100%, 420px);
   /* A pessoa não está perfeitamente centralizada no PNG (sobra mais
-     espaço transparente à esquerda do que à direita): ~2.9% do
+     espaço transparente à esquerda do que à direita): ~3.1% do
      recorte real. Corrige o centro de referência dos elementos
-     decorativos para acompanhar o corpo dela, não a tela do arquivo. */
-  --subject-shift: 2.9%;
+     decorativos (disco/anel) para acompanhar o corpo dela, não a
+     tela do arquivo. */
+  --subject-shift: 3.1%;
 }
 
 .hero__photo-stage {
@@ -265,27 +266,6 @@
   to { transform: rotate(360deg); }
 }
 
-.hero__photo-wave {
-  position: absolute;
-  z-index: 2;
-  bottom: -1%;
-  left: calc(50% + var(--subject-shift));
-  transform: translateX(-50%);
-  width: min(74%, 320px);
-  height: auto;
-  aspect-ratio: 192 / 47;
-  filter: drop-shadow(0 10px 18px rgba(184, 18, 96, 0.35));
-  animation: wave-breathe 5s ease-in-out infinite;
-}
-
-.hero__photo-wave path {
-  fill: var(--pink);
-}
-
-@keyframes wave-breathe {
-  0%, 100% { transform: translateX(-50%) scaleY(1); }
-  50% { transform: translateX(-50%) scaleY(1.08); }
-}
 
 .hero__photo-img {
   position: relative;
